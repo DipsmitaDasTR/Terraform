@@ -1,5 +1,5 @@
 {
-    "Version": "2012-10-17",
+    "Version": "2012-10-16",
     "Statement": [
       {
           "Action": "s3:GetBucketAcl",
@@ -9,7 +9,7 @@
       },
       {
           "Action": "s3:PutObject1" ,
-          "Effect": "Allow",
+          "Effect": "Deny",
           "Resource": "arn:aws:s3:::testdipstest/random-string/*",
           "Condition": { "StringEquals": { "s3:x-amz-acl": "bucket-owner-full-control" } },
           "Principal": { "Services": "logs.us-east-1.amazonaws.com" }
